@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif; 
+  }
+
+  body{
+    background-color: rgba(44,44,44,255);
+  }
+  .main{
+    
+    position: relative;
+    text-align: center;
+    
+  }
+  .postForm
+  {
+    background-color: #121316;
+
+    text-align: center;
+  }
+
+
+  .container
+  {
+    padding: 16px;
+    background-color: rgba(232,232,232,255);
+    text-align: center;
+    height: auto;
+    width: 1024px;
+    margin: 0 auto;
+    border-radius:  10px;
+   
+  }
+  
+  input[type=text], input[type=url], input[type=date] {
+    width:50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border:2px;
+    background: ddd;
+    border-radius:  10px;
+    text-align: center;
+
+  }
+  
+  input[type=text]:focus, input[type=url]:focus input[type=date]:focus{
+    background-color: ddd;
+    outline: none;
+  }
+
+  p{
+    margin: auto;
+    background-color: rgba(232,232,232,255);
+  }
+
+  #postForm{
+    background-color: rgba(232,232,232,255);
+  }
+  
+  #postForm button {
+    width:50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border:2px;
+    background: ddd;
+    border-radius:  10px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  #postForm button {
+
+    border: 3px solid rgba(44,44,44,255);
+  }
+  
+  #postForm input:focus {
+    border: 3px solid #367bfa;
+  }
+  
+  #postForm button:active {
+    border: 3px solid #367bfa;
+  }
+  
+  .posts {
+    
+    flex-direction: column;
+    align-items: center;
+    color: #2f2f2f;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+  
+  .posts div {
+    width: 1024px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(232,232,232,255);
+    margin: 5px;
+    border-radius: 15px;
+    
+  }
+  
+  .posts div * {
+    margin: 5px;
+  }
+  .searchBar
+  {
+    width: 1024px;
+    padding: 2px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border:2px;
+    border-radius: 10px;
+    text-align: right;
+  }
+
+  .filter-posts
+  {
+    border-radius:  10px;
+    width: 20px;
+    height: 20px;
+
+  }
+
+ 
+
+img
+  {
+    width: 250px;
+    height: 250px;
+    border-radius:  10px;
+    float: left;
+  }
+
+  h2
+  {
+    width:70%;
+    padding: 5px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border:2px;
+    border-radius:  10px;
+    text-align: center;
+    float: right;
+  }
+
+  h3
+  {
+    width:70%;
+    padding: 5px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border:8px ;
+    border-radius:  10px;
+    text-align: center;
+    font-weight: normal;
+    float: right;
+    
+  }
+
+  h4
+  {
+    width:70%;
+    padding: auto;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    text-align: left;
+    border:2px;
+    border-radius:  10px;
+    font-weight: normal;
+    background-color: rgba(44,44,44,255);
+    color: rgba(232,232,232,255);
+    float: right;
+    border:rgba(44,44,44,255) 20px solid;
+    
+  }
+
+  .commentSection
+  {
+    text-align: left;
+    
+  }
+
