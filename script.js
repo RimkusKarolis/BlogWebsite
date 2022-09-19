@@ -31,16 +31,13 @@ const addPost = (name, date, url, comment) => {
 const createPostElement = ({ name, date, url, comment }) => {
   // Create elements
   const postDiv = document.createElement("div")
-  postDiv.className='listas';
+  postDiv.className='list';
   const postName = document.createElement("h2");
   const postDate = document.createElement("h3");
   const postUrl = document.createElement("img");
   const postComment = document.createElement("h4");
 
   // Fill the contents
- 
-    
-
   if(new Date(date).getFullYear() == tempDate)
   {
     postName.innerText = name;
@@ -54,9 +51,21 @@ const createPostElement = ({ name, date, url, comment }) => {
     postsContainer.style.display = posts.length === 0 ? "none" : "flex";
   
   }
-  
-  
- 
+  else
+  {
+    Swal.fire({
+      title:
+'<strong >There is no data under this date</strong>',
+      html: '',
+      showCloseButton: true,
+      focusConfirm: false,
+      confirmButtonText:
+'<i class="fa fa-thumbs-up"></i> Okay!',
+      confirmButtonAriaLabel: 
+          'Okay!',
+  })
+      return false;
+  }
 };
 
 postsContainer.style.display = posts.length === 1 ? "none" : "flex";
@@ -83,7 +92,7 @@ postForm.onsubmit = e => {
 }
 
 
-// Date filter not let choose previous date
+// Date filter not let choose previous date and future date
 
 var date = new Date();
 var tdate = date.getDate();
@@ -133,7 +142,7 @@ function clearContainer()
         }
     }
  
-        document.getElementsByClassName("listas").remove();
+        document.getElementsByClassName("list").remove();
 }
 
 //checking if user enter full name
