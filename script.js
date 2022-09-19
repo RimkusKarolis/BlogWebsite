@@ -99,6 +99,7 @@ if(month < 10)
 var year = date.getUTCFullYear();
 var minDate = year + "-" + month + "-" + tdate;
 filterdate.setAttribute('min', minDate);
+filterdate.setAttribute('max', minDate);
 
 // Get selected date from select option
 
@@ -134,3 +135,38 @@ function clearContainer()
  
         document.getElementsByClassName("listas").remove();
 }
+
+//checking if user enter full name
+
+function validate(){
+  var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+  var name = document.getElementById('name').value;
+  if(!regName.test(name)){
+    Swal.fire({
+      title:
+'<strong>Please enter your full name</strong>',
+      html: '',
+      showCloseButton: true,
+      focusConfirm: false,
+      confirmButtonText:
+'<i class="fa fa-thumbs-up"></i> Okay!',
+      confirmButtonAriaLabel: 
+          'Okay!',
+  })
+      return false;
+  }else{
+    Swal.fire({
+      title:
+'<strong>New post created!</strong>',
+      html: '',
+      showCloseButton: true,
+      focusConfirm: false,
+      confirmButtonText:
+'<i class="fa fa-thumbs-up"></i> Okay!',
+      confirmButtonAriaLabel: 
+          'Okay!',
+        })
+      return true;
+  }
+}
+
